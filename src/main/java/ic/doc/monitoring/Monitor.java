@@ -1,7 +1,6 @@
 package ic.doc.monitoring;
 
-import org.joda.time.DateTime;
-
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,9 +22,9 @@ public class Monitor {
             if (!probe.passes()) {
                 emailer.send("support@example.com", probe.getFailureDescription());
 
-                DateTime now = new DateTime();
-                if (now.getHourOfDay() >= BusinessHours.START_OF_BUSINESS &&
-                        now.getHourOfDay() < BusinessHours.CLOSE_OF_BUSINESS) {
+                LocalTime now = LocalTime.now();
+                if (now.getHour() >= BusinessHours.START_OF_BUSINESS &&
+                        now.getHour() < BusinessHours.CLOSE_OF_BUSINESS) {
                     smsSender.send("+447777123456", probe.getFailureDescription());
                 }
             }
