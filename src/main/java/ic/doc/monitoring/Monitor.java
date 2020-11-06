@@ -9,7 +9,7 @@ public class Monitor {
     private List<WebPageProbe> probes;
 
     public Monitor() {
-        this.probes = new ArrayList<WebPageProbe>();
+        this.probes = new ArrayList<>();
         this.probes.add(new WebPageProbe("http://www.google.com", "Google"));
         this.probes.add(new WebPageProbe("http://www.imperial.ac.uk/", "Imperial College"));
     }
