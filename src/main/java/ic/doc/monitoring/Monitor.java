@@ -10,8 +10,8 @@ public class Monitor {
 
     public Monitor() {
         this.probes = new ArrayList<>();
-        this.probes.add(new WebPageProbe("http://www.google.com", "Google"));
-        this.probes.add(new WebPageProbe("http://www.imperial.ac.uk/", "Imperial College"));
+        this.probes.add(new WebPageProbe("https://www.google.com", "Google"));
+        this.probes.add(new WebPageProbe("https://www.imperial.ac.uk/", "Imperial College"));
     }
 
     public void check() {
