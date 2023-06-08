@@ -11,7 +11,7 @@ public class Monitor {
     public Monitor() {
         this.probes = new ArrayList<>();
         this.probes.add(new WebPageProbe("https://www.google.com", "Google"));
-        this.probes.add(new WebPageProbe("https://www.imperial.ac.uk/", "Imperial College"));
+        this.probes.add(new WebPageProbe("https://www.morganstanley.com", "Morgan Stanley"));
     }
 
     public void check() {
